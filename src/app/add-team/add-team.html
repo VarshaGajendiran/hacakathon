@@ -1,0 +1,14 @@
+
+<h1>Team</h1>
+<form (ngSubmit)="addteam()">
+    <label for="teamname">Team Name:</label>
+    <input [(ngModel)]="newTeam.teamname" type="text" id="teamname" name="teamname" required/><br><br>
+
+    <label for="hackathonid">Hackathon id:</label>
+    <input [(ngModel)]="newTeam.hackathonid" type="number" id="hackathonid" name="hackathonid" required/><br><br>
+
+    <button  type="submit"     >Submit</button><br><br>
+
+    <a href="">Home_page</a>
+
+</form>

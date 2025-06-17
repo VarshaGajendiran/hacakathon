@@ -1,0 +1,5 @@
+services:
+  frontend:
+    build: ./hackathon-app
+    ports:
+      - "80:80"

@@ -1,0 +1,16 @@
+<h1>Participant</h1>
+<form (ngSubmit)="addparticipant()">
+    <label for="participantname">participant Name:</label>
+    <input [(ngModel)]="newParticipant.participantname" type="text" id="participantname" name="participantname" required/><br><br>
+
+    <label for="participantrmail">participant email:</label>
+    <input [(ngModel)]="newParticipant.participantemail" type="email" id="participantemail" name="participantemail" required/><br><br>
+
+    <label for="teamid">team id:</label>
+    <input [(ngModel)]="newParticipant.team.teamid" type="number" id="teamid" name="teamid" required/><br><br>
+
+    <button  type="submit"     >Submit</button><br><br>
+
+    <a href="">Home_page</a>
+
+</form>

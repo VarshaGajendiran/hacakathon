@@ -1,0 +1,46 @@
+<form >
+    <label for="searchId">Enter a Hackathon Id</label>
+    <input [(ngModel)]="searchId" type="text" id="searchId" name="searchId">
+    <br><br>
+    <button  type="button" (click)="getHackathonById()">Search</button>
+    <br><br>
+    
+    <div *ngIf="hackathon">
+        <p><strong>hackathon id:</strong>{{hackathon.hackathonid}}</p> 
+        <p><strong>hackathon name:</strong>{{hackathon.hackathonname}}</p>
+        <p><strong>hackathon date:</strong>{{hackathon.hackathondate}}</p>
+        
+        
+        </div>
+
+        
+    <button type="button" (click)="getAllHackathon()">Show All hackathons</button>
+    <h2>All Hackathon</h2>
+    <table border="1">
+        <thead>
+            <tr>
+            <th>Hackathon Id</th>
+            <th>Hackathon name</th>
+            <th>Hackathon Date</th>
+          
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let  hackathon of hackathonList">
+                <td>{{hackathon.hackathonid}}</td>
+                <td>{{hackathon.hackathonname}}</td>
+                <td>{{hackathon.hackathondate}}</td>
+               
+                
+    
+    
+            </tr>
+    
+        </tbody>
+    
+    </table>
+    <br><br>
+    
+    <a href="">Back</a>
+    
+    

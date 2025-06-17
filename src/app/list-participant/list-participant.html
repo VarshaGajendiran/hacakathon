@@ -1,0 +1,49 @@
+<form >
+    <label for="searchId">Enter a Participant Id</label>
+    <input [(ngModel)]="searchId" type="text" id="searchId" name="searchId">
+    <br><br>
+    <button  type="button" (click)="getParticipantById()">Search</button>
+    <br><br>
+    
+    <div *ngIf="participant">
+        <p><strong>participant id:</strong>{{participant.participantid}}</p> 
+        <p><strong>participant name:</strong>{{participant.participantname}}</p>
+        <p><strong>participant date:</strong>{{participant.participantemail}}</p>
+     
+        
+        
+        </div>
+
+        
+    <button type="button" (click)="getAllParticipant()">Show All participants</button>
+    <h2>All participant</h2>
+    <table border="1">
+        <thead>
+            <tr>
+            <th>participant Id</th>
+            <th>participant name</th>
+            <th>participant email</th>
+      
+          
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let  participant of participantList">
+                <td>{{participant.participantid}}</td>
+                <td>{{participant.participantname}}</td>
+                <td>{{participant.participantemail}}</td>
+             
+               
+                
+    
+    
+            </tr>
+    
+        </tbody>
+    
+    </table>
+    <br><br>
+    
+    <a href="">Back</a>
+    
+    

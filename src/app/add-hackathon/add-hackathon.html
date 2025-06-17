@@ -1,0 +1,13 @@
+<h1>Hackathon</h1>
+<form (ngSubmit)="addhackathon()">
+    <label for="hackathonname">Hackathon Name:</label>
+    <input [(ngModel)]="newHackathon.hackathonname" type="text" id="hackathonname" name="hackathonname" required/><br><br>
+
+    <label for="hackathondate">Hackathon date:</label>
+    <input [(ngModel)]="newHackathon.hackathondate" type="date" id="hackathondate" name="hackathondate" required/><br><br>
+
+    <button  type="submit">Submit</button><br><br>
+
+    <a href="">Home_page</a>
+
+</form>
